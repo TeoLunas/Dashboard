@@ -26,6 +26,8 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* - - - - - - - DARK THEME VARIABLES - - - - - - -*/
+
 * {
     margin: 0;
     padding: 0;
@@ -594,7 +596,7 @@ main a {
 
     aside {
         position: fixed;
-        left: 0;
+        left: -100%;
         background: var(--color-white);
         width: 18rem;
         z-index: 3;
@@ -602,6 +604,13 @@ main a {
         height: 100vh;
         padding-right: var(--card-padding);
         display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left:0;
+        }
     }
 
     aside .logo{
